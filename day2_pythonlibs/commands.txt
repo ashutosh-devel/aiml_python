@@ -1,0 +1,113 @@
+NUMPY
+
+1.Creation
+import numpy as np
+a = np.array([[1,2,3],[4,5,6]],dtype=np.float32)
+print(a.ndim, a.shape, a.dtype)
+
+np.ones((3,5),dtype=np.float32)
+np.zeros((6,2),dtype=np.int8)
+np.arange(1334,1338)
+
+A=np.ones((2,3))
+B=np.zeros((4,3))
+np.concatenate([A,B])
+
+A=np.ones((4,1))
+B=np.zeros((4,2))
+np.concatenate([A,B],axis=1)
+
+A=np.array([1.2,2.4,3.6],dtype=np.float32)
+A.astype(np.uint16)
+
+np.random.random((10,3))
+
+2.Shaping
+
+a = np.array([1,2,3,4,5,6])
+a = a.reshape(3,2)
+a = a.reshape(2,-1)
+a = a.ravel()
+
+3. Transposition
+
+a = np.arange(10).reshape(5,2) 
+a = a.T 
+a = a.transpose((1,0)) 
+
+4.Saving and loading arrays
+
+import numpy as np
+a=np.arange(5)
+np.save('outfile',a)
+b=np.load('outfile.npy')
+
+
+
+import numpy as np
+a=([1,2,3],[4,5,6])
+print(a)
+np.savetxt('outfile.txt',a, delimiter=',',fmt='%i')
+b=np.loadtxt('outfile.txt',delimiter=',', dtype=int)
+print(b)
+
+
+
+5.Mathematical operations
+
+a=np.array([1,2,3])
+b=np.array([4,4,10])
+a*b
+a>2
+b/a
+
+6.Math,universal functions
+
+a=np.array([1,2,3])
+np.exp(a)
+
+a=np.array([1,4,9])
+np.sqrt(a)
+
+np.sin(np.pi/2)
+
+np.cos(0)
+
+np.isnan(np.array([np.nan,0,np.nan]))
+
+
+7.Indexing
+x=np.arange(20).reshape(4,5)
+x
+x[0,0]
+x[0,-1]
+x[0,:]
+x[:,0]
+
+8.slicing
+x=np.arange(20).reshape(4,5)
+x
+x[1:-1,1:-1]
+x[x<10]=0
+x
+x[[1,3],:]
+
+9.python slicing
+
+a = list(range(10)) 
+a[:3] 
+a[-3:]
+a[3:8:2] 
+a[4:1:-1] 
+
+10.Broadcasting
+a=np.arange(27).reshape((3,3,3,))
+a
+b=np.arange(3)
+b
+a+b
+
+
+
+
+
