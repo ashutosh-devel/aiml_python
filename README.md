@@ -1,1 +1,1 @@
-# The resources for all the AIML python notebooks for the training will be posted in this repository.
+AIML python notebooks and documents for the training are posted in this repository.
